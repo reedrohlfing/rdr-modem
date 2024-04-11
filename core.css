@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "TheNeueBlack";
+  src: url("TheNeue-Black.woff2") format("woff2");
+}
+/* Available fonts: Oxanium, Electrolize, Barlow, TheNeueBlack */
+html {
+  font-family: "Oxanium";
+  letter-spacing: 1px;
+}
+
+:root {
+  --left-navbar-width: 250px;
+  --top-navbar-height: 100px;
+  --main-color: #33333b;
+  --main-color-dark: #1f1f24;
+  --light-filter: rgba(255, 255, 255, 0.463);
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#dash {
+  background-color: var(--main-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+#dash-bottom {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+#dash-btm-left {
+  min-height: calc(100vh - 20px);
+  width: var(--left-navbar-width);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+#dash-btm-right {
+  padding: 20px 20px 20px 0px;
+  overflow-y: scroll;
+  width: calc(100% - var(--left-navbar-width) - 20px);
+  scrollbar-width: none;
+}
+#dash-btm-right-content {
+  background-color: var(--main-color-dark);
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+  border: 1px solid white;
+  padding: 50px 100px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+}
+#dash-btm-right-subsections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* #logo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#windan-logo {
+    height: 90px;
+    width: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding: 25px 30px;
+}
+.windan-oval {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(var(--main-color), var(--main-color)), linear-gradient(to bottom, white, var(--main-color), white);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 100%;
+    height: 100%;
+} */
+
+.nav-category-title {
+  font-family: "TheNeueBlack";
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  padding: 20px 30px;
+  padding-bottom: 0px;
+}
+
+.nav-button-title {
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 12px;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 15px 20px;
+  text-align: right;
+  align-content: end;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.nav-button-title:hover {
+  background-color: var(--light-filter);
+  backdrop-filter: blur(1px);
+  color: var(--main-color);
+  border: 1px solid transparent;
+}
+
+.selected {
+  background-color: var(--light-filter);
+  backdrop-filter: blur(1px);
+  color: var(--main-color);
+  border: 1px solid transparent;
+}
+
+#product-header {
+  display: flex;
+  padding: 8px 0 25px 30px;
+}
+.product-header-title {
+  font-family: "TheNeueBlack";
+  color: white;
+  font-size: 30px;
+}
+.product-header-subtitle {
+  color: white;
+  font-size: 20px;
+}
+
+#online {
+  color: greenyellow;
+}
+#enabled {
+  color: greenyellow;
+}
+
+.subsection {
+  background-color: var(--main-color);
+  padding: 30px 20px;
+  border: solid 1px white;
+  border-radius: 20px;
+}
+.info-header {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.subsection-info {
+  display: flex;
+  justify-content: space-between;
+}
+.info-title {
+  text-align: start;
+}
+.info {
+  text-align: end;
+  color: aqua;
+}
+
+#cmd-line {
+  background-color: transparent;
+  border: none;
+}
+.prompt input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Oxanium";
+  font-size: inherit;
+  color: white;
+  width: 90%;
+}
+
+@media (max-width: 900px) {
+  #dash-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  #dash-btm-left {
+    background-color: var(--main-color);
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    backdrop-filter: blur(3px);
+    min-height: 0;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    border-top: solid 1px white;
+    position: absolute;
+    bottom: 0;
+  }
+  #dash-btm-right {
+    padding: 20px;
+    width: auto;
+    height: auto;
+  }
+  .nav-styles {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-filter {
+    display: flex;
+    flex-direction: row;
+  }
+  #product-header {
+    padding: 0px 0px 30px 30px;
+  }
+  .nav-category-title {
+    padding: 20px 10px 20px 35px;
+  }
+  .nav-button-title {
+    white-space: nowrap;
+    margin: 15px 5px;
+  }
+}
+
+@media (max-width: 1300px) {
+  #dash-btm-right-subsections {
+    grid-template-columns: 1fr;
+  }
+  #dash-btm-right-content {
+    padding: 50px 100px;
+  }
+}

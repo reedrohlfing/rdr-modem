@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modem WebGUI</title>
+    <link rel="stylesheet" href="core.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Electrolize&family=Oxanium:wght@200..800&family=Recursive:wght@300..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="dash">
+      <div id="dash-bottom">
+        <div id="dash-btm-left">
+          <!-- onwheel="scrollHorizontally(event)"> -->
+          <!-- <div id="logo-container">
+                    <div id="windan-logo">
+                        <div class="windan-oval"></div>
+                        <div class="windan-oval"></div>
+                    </div>
+                </div> -->
+          <div class="nav-category-title">Status</div>
+          <div class="nav-styles">
+            <div class="nav-button-title selected">Modem</div>
+          </div>
+          <div class="nav-category-title">Configure</div>
+          <div class="nav-styles">
+            <div class="nav-button-title">Modem IP</div>
+            <div class="nav-button-title">Ethernet</div>
+            <div class="nav-button-title">Terminal</div>
+            <div class="nav-button-title">Encryption</div>
+          </div>
+          <div class="nav-category-title">Graphs</div>
+          <div class="nav-filter">
+            <div class="nav-button-title">Channel</div>
+            <div class="nav-button-title">Throughput</div>
+            <div class="nav-button-title">Ports</div>
+          </div>
+          <div class="nav-category-title">Advanced</div>
+          <div class="nav-filter">
+            <div class="nav-button-title">Admin</div>
+          </div>
+        </div>
+        <script>
+          function scrollHorizontally(event) {
+            var container = document.getElementById("dash-btm-left");
+            if (event.deltaY != 0) {
+              container.scrollLeft += event.deltaY;
+              event.preventDefault();
+            }
+          }
+        </script>
+        <div id="dash-btm-right">
+          <div id="dash-btm-right-content">
+            <div id="product-header">
+              <div class="product-header-title">Modem Status</div>
+            </div>
+            <div id="dash-btm-right-subsections">
+              <div class="subsection">
+                <div class="subsection-info">
+                  <div class="info-header">Terminal Status</div>
+                  <div id="online">ONLINE</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-header">Encryption</div>
+                  <div id="enabled">ENABLED</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-header">EsNo</div>
+                  <div class="info">+5.2 dB</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-header">Receive Power</div>
+                  <div class="info">-41 dBm</div>
+                </div>
+              </div>
+              <div class="subsection">
+                <div class="info-header">Antenna Status</div>
+                <div class="subsection-info">
+                  <div class="info-title">Status</div>
+                  <div class="info" id="online">POINTED</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Latitude</div>
+                  <div class="info">9.65 deg South</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Longitude</div>
+                  <div class="info">20.38 deg East</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Elevation</div>
+                  <div class="info">23.6 deg</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Azimuth</div>
+                  <div class="info">276.0 deg</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Polarization</div>
+                  <div class="info">-78.7 deg</div>
+                </div>
+              </div>
+              <div class="subsection">
+                <div class="info-header">Modem Status</div>
+                <div class="subsection-info">
+                  <div class="info-title">Data Link</div>
+                  <div class="info" id="online">ESTABLISHED</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">SAT Rx</div>
+                  <div class="info" id="online">LOCKED</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">SAT Tx</div>
+                  <div class="info" id="online">ON</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Temperature</div>
+                  <div class="info" id="online">80 deg F</div>
+                </div>
+              </div>
+              <div class="subsection">
+                <div class="info-header">Modem Information</div>
+                <div class="subsection-info">
+                  <div class="info-title">Model</div>
+                  <div class="info">Modem 1.0</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Serial Number</div>
+                  <div class="info">749002390</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">MAC Address</div>
+                  <div class="info">00:60:45:f2:6d:99</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Software Version</div>
+                  <div class="info">1.0.0</div>
+                </div>
+              </div>
+              <div class="subsection">
+                <div class="info-header">Ethernet Information</div>
+                <div class="subsection-info">
+                  <div class="info-title">IP Address</div>
+                  <div class="info">192.168.10.18</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Subnet Mask</div>
+                  <div class="info">255.255.255.0</div>
+                </div>
+                <div class="subsection-info">
+                  <div class="info-title">Gateway</div>
+                  <div class="info">192.168.10.1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="dash-btm-right-content">
+            <div id="product-header">
+              <div class="product-header-title">Terminal CMD Line</div>
+            </div>
+            <div class="subsection" id="terminal-body">
+              <div>Type 'help' for a list of commands.</div>
+              <div class="prompt">$&nbsp;<input type="text" id="cmd-line"></div>
+              <script>
+                const terminalBody = document.getElementById('terminal-body');
+                const commandInput = document.getElementById('cmd-line');
+            
+                commandInput.addEventListener('keyup', function(event) {
+                  if (event.key === 'Enter') {
+                    const command = this.value.trim();
+                    const output = document.createElement('div');
+                    output.textContent = '$ ' + command;
+                    terminalBody.insertBefore(output, this.parentNode);
+            
+                    // Handle command execution here
+            
+                    this.value = ''; // Clear input field after command execution
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
